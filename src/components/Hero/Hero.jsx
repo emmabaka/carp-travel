@@ -2,7 +2,7 @@ import s from "./Hero.module.css";
 
 const Hero = () => {
   return (
-    <section className={`${s.heroSection} bg-hero pt-9 pb-14`}>
+    <section className={`${s.heroSection} bg-hero pt-[105px] pb-14`}>
       <div className="max-w-xs m-auto pr-5 pl-5">
         <div className="tex text-right">
           <h2 className="flex flex-col">

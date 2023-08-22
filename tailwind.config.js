@@ -21,6 +21,7 @@ module.exports = {
       buttonHover: "rgba(255, 255, 255, 0.2)",
       backgroundInput: "rgba(255, 255, 255, 0.05)",
       backgroundDefault: "rgba(255, 255, 255, 0.10)",
+      menuBackground: "rgba(1, 10, 5, 0.75)",
     },
     fontFamily: {
       inter: ["Inter", " sans-serif"],
