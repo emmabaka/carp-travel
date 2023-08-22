@@ -1,3 +1,5 @@
+import ChooseUsForm from "../ChooseUsForm/ChooseUsForm";
+
 const advantages = [
   {
     id: 1,
@@ -20,6 +22,7 @@ const advantages = [
     desc: "Unleash your potential through unforgettable projects showcasing Carpathian beauty.Flexibility and remote options for a comfortable experience.",
   },
 ];
+
 const ChooseUs = () => {
   return (
     <section className="bg-backgroundSections py-[56px]">
@@ -49,6 +52,7 @@ const ChooseUs = () => {
           ))}
         </ul>
       </div>
+      <ChooseUsForm />
     </section>
   );
 };

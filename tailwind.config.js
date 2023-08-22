@@ -25,6 +25,7 @@ module.exports = {
       backgroundDefault: "rgba(255, 255, 255, 0.10)",
       backgroundSections: "rgba(2, 15, 8, 0.5)",
       menuBackground: "rgba(1, 10, 5, 0.75)",
+      transparent: "transparent",
     },
     fontFamily: {
       inter: ["Inter", " sans-serif"],
