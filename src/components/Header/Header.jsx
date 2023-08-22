@@ -17,7 +17,7 @@ const Header = () => {
 
   return (
     <header className="absolute pt-9 w-full">
-      <div className="max-w-xs m-auto pr-5 pl-5 flex justify-between items-center">
+      <div className="m-auto pr-5 pl-5 flex justify-between items-center">
         <Link href="/" className="flex flex-col items-center justify-center">
           <Image src={logo} alt="Logo" width={59} height={21}></Image>
           <span

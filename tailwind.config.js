@@ -9,9 +9,11 @@ module.exports = {
     extend: {},
     backgroundImage: {
       hero: "url('/public/hero.png')",
+      about: "url('/public/about.jpg')",
     },
     screens: {
       mobile: "320px",
+      mobile2: "400px",
       tablet: "768px",
       desktop: "1280px",
     },
@@ -21,6 +23,7 @@ module.exports = {
       buttonHover: "rgba(255, 255, 255, 0.2)",
       backgroundInput: "rgba(255, 255, 255, 0.05)",
       backgroundDefault: "rgba(255, 255, 255, 0.10)",
+      backgroundSections: "rgba(2, 15, 8, 0.5)",
       menuBackground: "rgba(1, 10, 5, 0.75)",
     },
     fontFamily: {
