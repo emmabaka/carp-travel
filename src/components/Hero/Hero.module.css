@@ -1,0 +1,26 @@
+.heroSection {
+  background-image: url("/public/hero.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background: rgba(2, 15, 8, 0.5);
+}
+.joinButton::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 42px;
+  height: 53px;
+  background-image: url("/public/button-border-mobile-right.svg");
+  background-size: cover;
+}
+.joinButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 42px;
+  height: 53px;
+  background-image: url("/public/button-border-mobile-left.svg");
+  background-size: cover;
+}
