@@ -1,7 +1,7 @@
 const About = () => {
   return (
     <section className=" bg-about bg-backgroundSections pt-[55px] pb-[54px]">
-      <div className="m-auto pr-5 pl-5 pb-2">
+      <div className="content-container">
         <h2 className="text-40 text-white font-medium tracking-[-1.6px]">
           <span className="font-thin">Who</span> we are
         </h2>

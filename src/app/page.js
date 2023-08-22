@@ -1,7 +1,7 @@
 import Hero from "@/components/Hero/Hero";
 import Header from "@/components/Header/Header";
-import Image from "next/image";
 import About from "@/components/About/About";
+import ChooseUs from "@/components/ChooseUs/ChooseUs";
 
 export default function Home() {
   return (
@@ -9,6 +9,7 @@ export default function Home() {
       <Header />
       <Hero />
       <About />
+      <ChooseUs />
     </>
   );
 }

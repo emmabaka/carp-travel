@@ -3,7 +3,7 @@ import s from "./Hero.module.css";
 const Hero = () => {
   return (
     <section className={`${s.heroSection} bg-hero pt-[105px] pb-14`}>
-      <div className="m-auto pr-5 pl-5">
+      <div className="content-container">
         <div className="tex text-right ">
           <h2 className="flex flex-col">
             <div className="text-37 font-medium text-white leading-tight">
