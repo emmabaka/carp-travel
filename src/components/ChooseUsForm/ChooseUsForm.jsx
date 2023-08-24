@@ -1,187 +1,215 @@
-"use client";
-import { useForm } from "react-hook-form";
-import InputMask from "react-input-mask";
-import error from "../../../public/x.svg";
-import s from "./ChooseUsForm.module.css";
-import Image from "next/image";
+'use client';
+import { useForm } from 'react-hook-form';
+import InputMask from 'react-input-mask';
+import error from '../../../public/x.svg';
+import s from './ChooseUsForm.module.css';
+import Image from 'next/image';
+import { useEffect, useRef, useState } from 'react';
 
 const ChooseUsForm = () => {
+  const [disable, setDisable] = useState(true);
+  const [checked, setChecked] = useState(false);
+
   const {
     handleSubmit,
     register,
     formState: { errors },
+    formState,
+    getValues,
     reset,
   } = useForm({
-    mode: "onBlur",
+    mode: 'onBlur',
     defaultValues: {
-      name: "",
-      email: "",
-      position: "",
-      phone: "",
-      message: "",
-      confirm: "",
+      name: '',
+      email: '',
+      position: '',
+      phone: '',
+      message: '',
+      confirm: false,
     },
   });
+
   const onSubmit = (values) => {
     console.log(values);
     reset();
   };
 
+  useEffect(() => {
+    errors.name || errors.email || errors.phone || errors.confirm
+      ? setDisable(true)
+      : setDisable(false);
+  }, [errors.name, errors.email, errors.phone, errors.confirm]);
+
   return (
-    <div className="py-[56px] px-5">
-      <p className="text-14 text-white font-extralight leading-5 max-w-[179px] ml-auto pb-[24px]">
+    <div className='py-[56px] px-5'>
+      <p className='text-14 text-white font-extralight leading-5 max-w-[179px] ml-auto pb-[24px]'>
         Don&apos;t miss your opportunity!
         <br />
         Fill out the form right now and join our team!
       </p>
-      <form className="bg-transparent" onSubmit={handleSubmit(onSubmit)}>
-        <div className="relative flex flex-col gap-1 pb-4">
+      <form className='bg-transparent' onSubmit={handleSubmit(onSubmit)}>
+        <div className='relative flex flex-col gap-1 pb-4'>
           <label
-            className={`${errors.name ? "text-red" : "text-white"} ${s.label}`}
-            htmlFor="name"
+            className={`${errors.name ? 'text-red' : 'text-white'} ${s.label}`}
+            htmlFor='name'
           >
             Full name
           </label>
-          <div className="relative">
+          <div className='relative'>
             <input
-              className={`${errors.name ? "text-red" : "text-white"} ${
+              className={`${errors.name ? 'text-red' : 'text-white'} ${
                 s.input
               } px-2`}
-              type="text"
-              {...register("name", {
-                required: "Required",
+              type='text'
+              {...register('name', {
+                required: 'Required',
                 pattern: {
                   value:
                     /^[a-zA-ZÀ-ÖØ-öø-ÿ]+([-'][a-zA-ZÀ-ÖØ-öø-ÿ]+)*(\s[a-zA-ZÀ-ÖØ-öø-ÿ]+([-'][a-zA-ZÀ-ÖØ-öø-ÿ]+)*)*$/,
-                  message: "Incorrect name",
+                  message: 'Incorrect name',
                 },
               })}
-              id="name"
-              placeholder="John Smith"
+              id='name'
+              placeholder='John Smith'
             />
             {errors.name && (
               <p className={s.error}>
-                <Image src={error} alt="error" width={18} height={18} />
+                <Image src={error} alt='error' width={18} height={18} />
                 {errors.name.message}
               </p>
             )}
           </div>
         </div>
-        <div className="relative flex flex-col gap-1 pb-4">
+        <div className='relative flex flex-col gap-1 pb-4'>
           <label
-            className={`${errors.email ? "text-red" : "text-white"} ${s.label}`}
-            htmlFor="email"
+            className={`${errors.email ? 'text-red' : 'text-white'} ${s.label}`}
+            htmlFor='email'
           >
             E-mail
           </label>
-          <div className="relative">
+          <div className='relative'>
             <input
-              className={`${errors.name ? "text-red" : "text-white"} ${
+              className={`${errors.name ? 'text-red' : 'text-white'} ${
                 s.input
               } px-2`}
-              type="email"
-              {...register("email", {
-                required: "Required",
+              type='email'
+              {...register('email', {
+                required: 'Required',
                 pattern: {
                   value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-                  message: "Invalid email",
+                  message: 'Invalid email',
                 },
               })}
-              id="email"
-              placeholder="johnsmith@email.com"
+              id='email'
+              placeholder='johnsmith@email.com'
             />
             {errors.email && (
               <p className={s.error}>
-                <Image src={error} alt="error" width={18} height={18} />
+                <Image src={error} alt='error' width={18} height={18} />
                 {errors.email.message}
               </p>
             )}
           </div>
         </div>
-        <div className="flex flex-col gap-1 pb-4">
-          <label className={s.label} htmlFor="position">
+        <div className='flex flex-col gap-1 pb-4'>
+          <label className={`${s.label} text-white`} htmlFor='position'>
             Position
           </label>
           <input
             className={`${s.input} px-2`}
-            type="text"
-            {...register("position", {
+            type='text'
+            {...register('position', {
               required: false,
             })}
-            id="position"
-            placeholder="Movie maker"
+            id='position'
+            placeholder='Movie maker'
           />
         </div>
-        <div className="flex flex-col gap-1 pb-4">
+        <div className='flex flex-col gap-1 pb-4'>
           <label
-            className={`${errors.phone ? "text-red" : "text-white"} ${s.label}`}
-            htmlFor="phone"
+            className={`${errors.phone ? 'text-red' : 'text-white'} ${s.label}`}
+            htmlFor='phone'
           >
             Phone
           </label>
-          <div className="relative">
+          <div className='relative'>
             <InputMask
-              className={`${errors.name ? "text-red" : "text-white"} ${
+              className={`${errors.phone ? 'text-red' : 'text-white'} ${
                 s.input
               } pl-14 pr-2`}
-              type="text"
-              mask="(999) 99 99 999"
-              {...register("phone", {
-                required: "Required",
+              type='text'
+              mask='(999) 99 99 999'
+              {...register('phone', {
+                required: 'Required',
                 pattern: {
                   value: /^\(\d{3}\) \d{2} \d{2} \d{3}$/,
-                  message: "Incorrect phone",
+                  message: 'Incorrect phone',
                 },
               })}
-              id="phone"
-              maskPlaceholder="(&bull;&bull;&bull;) &bull;&bull; &bull;&bull; &bull;&bull;&bull;"
-              placeholder="(097) 12 34 567"
+              id='phone'
+              maskPlaceholder='(&bull;&bull;&bull;) &bull;&bull; &bull;&bull; &bull;&bull;&bull;'
+              placeholder='(097) 12 34 567'
             />
-            <span className="absolute left-2 top-2/4 -translate-y-1/2 text-20 text-white font-extralight leading-6">
+            <span className='absolute left-2 top-2/4 -translate-y-1/2 text-20 text-white font-extralight leading-6'>
               + 38
             </span>
             {errors.phone && (
               <p className={s.error}>
-                <Image src={error} alt="error" width={18} height={18} />
+                <Image src={error} alt='error' width={18} height={18} />
                 {errors.phone.message}
               </p>
             )}
           </div>
         </div>
-        <div className="flex flex-col gap-1 pb-4">
-          <label className={s.label} htmlFor="message">
+        <div className='flex flex-col gap-1 pb-4'>
+          <label className={`${s.label} text-white`} htmlFor='message'>
             Message
           </label>
           <textarea
             className={`${s.input} px-2 resize-none`}
-            {...register("message", {
+            {...register('message', {
               required: false,
             })}
-            id="message"
-            cols="25"
-            rows="8"
+            id='message'
+            cols='25'
+            rows='8'
           />
         </div>
-        <div className="pb-4">
+        <div className='pb-4'>
           <input
-            type="checkbox"
-            {...register("confirm", {
+            onClick={() => {
+              checked ? setChecked(false) : setChecked(true);
+            }}
+            className=' invisible absolute whitespace-nowrap w-[1px] h-[1px] overflow-hidden border-0 p-0 m-[-1px]'
+            type='checkbox'
+            {...register('confirm', {
               required: true,
             })}
-            id="confirm"
+            id='confirm'
           />
           <label
             className={`${
-              errors.confirm ? "text-red" : "text-white"
-            } text-12 font-extralight leading-[22px]`}
-            htmlFor="confirm"
+              errors.confirm ? 'text-red' : 'text-white'
+            } relative text-12 font-extralight leading-[22px]`}
+            htmlFor='confirm'
           >
-            I confirm my consent to the processing of personal data.
+            <p className=' max-w-[280px]  pl-8'>
+              I confirm my consent to the processing of <br /> personal data.
+            </p>
+            <div className='absolute top-0 left-0 block w-6 h-6 bg-transparent border-white border-[1px] '>
+              <div
+                className={`
+                ${
+                  checked ? 'bg-white' : 'bg-white bg-opacity-[0.1]'
+                } absolute top-1/2 -translate-y-2/4 left-1/2 -translate-x-2/4 block w-4 h-4`}
+              ></div>
+            </div>
           </label>
         </div>
         <button
-          className="block text-30 text-white font-medium uppercase ml-auto"
-          type="submit"
+          className='block text-30 text-white font-medium uppercase ml-auto disabled:text-buttonHover'
+          disabled={disable}
+          type='submit'
         >
           Send
         </button>
