@@ -7,13 +7,13 @@ const MobileGallery = () => {
   return (
     <ul className=' flex flex-col gap-6 items-center'>
       <li>
-        <Image src={mountain} alt='Mountain' width={280} height={187} />
+        <Image src={mountain} alt='Mountain' width='auto' height='auto' />
       </li>
       <li>
-        <Image src={lake} alt='Lake' width={280} height={187} />
+        <Image src={lake} alt='Lake' width='auto' height='auto' />
       </li>
       <li>
-        <Image src={forest} alt='Forest' width={280} height={187} />
+        <Image src={forest} alt='Forest' width='auto' height='auto' />
       </li>
     </ul>
   );
