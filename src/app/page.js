@@ -1,7 +1,8 @@
-import Hero from "@/components/Hero/Hero";
-import Header from "@/components/Header/Header";
-import About from "@/components/About/About";
-import ChooseUs from "@/components/ChooseUs/ChooseUs";
+import Hero from '@/components/Hero/Hero';
+import Header from '@/components/Header/Header';
+import About from '@/components/About/About';
+import ChooseUs from '@/components/ChooseUs/ChooseUs';
+import Gallery from '@/components/Gallery/Gallery';
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Hero />
       <About />
       <ChooseUs />
+      <Gallery />
     </>
   );
 }
