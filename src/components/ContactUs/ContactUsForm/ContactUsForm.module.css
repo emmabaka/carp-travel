@@ -1,0 +1,13 @@
+@tailwind components;
+
+@layer components {
+  .error {
+    @apply absolute right-0 bottom-0 translate-y-full flex items-center gap-1 text-12 text-red font-extralight leading-6 tracking-[2.4px];
+  }
+  .input {
+    @apply bg-backgroundInput text-20 font-extralight leading-6 py-[6px] w-full outline-none;
+  }
+  .label {
+    @apply text-12 font-extralight leading-6 tracking-[2.4px];
+  }
+}

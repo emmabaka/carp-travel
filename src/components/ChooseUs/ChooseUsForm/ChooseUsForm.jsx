@@ -1,10 +1,10 @@
 'use client';
+import { useEffect, useState } from 'react';
+import Image from 'next/image';
 import { useForm } from 'react-hook-form';
 import InputMask from 'react-input-mask';
-import error from '../../../public/x.svg';
+import error from '../../../../public/x.svg';
 import s from './ChooseUsForm.module.css';
-import Image from 'next/image';
-import { useEffect, useRef, useState } from 'react';
 
 const ChooseUsForm = () => {
   const [disable, setDisable] = useState(true);
@@ -14,8 +14,6 @@ const ChooseUsForm = () => {
     handleSubmit,
     register,
     formState: { errors },
-    formState,
-    getValues,
     reset,
   } = useForm({
     mode: 'onBlur',
@@ -89,7 +87,7 @@ const ChooseUsForm = () => {
           </label>
           <div className='relative'>
             <input
-              className={`${errors.name ? 'text-red' : 'text-white'} ${
+              className={`${errors.email ? 'text-red' : 'text-white'} ${
                 s.input
               } px-2`}
               type='email'

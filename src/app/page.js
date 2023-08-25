@@ -3,6 +3,7 @@ import Header from '@/components/Header/Header';
 import About from '@/components/About/About';
 import ChooseUs from '@/components/ChooseUs/ChooseUs';
 import Gallery from '@/components/Gallery/Gallery';
+import ContactUs from '@/components/ContactUs/ContactUs';
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <About />
       <ChooseUs />
       <Gallery />
+      <ContactUs/>
     </>
   );
 }
