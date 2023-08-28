@@ -57,17 +57,11 @@ const Slider = () => {
     sliderSections.forEach((section, index) => {
       bullet[index].textContent = section.active;
     });
-
-    console.log(bullet);
   }, []);
 
   return (
     <>
       <Swiper
-        style={{
-          '--swiper-navigation-color': '#fff',
-          '--swiper-pagination-color': '#fff',
-        }}
         speed={600}
         parallax={true}
         pagination={{
@@ -87,7 +81,7 @@ const Slider = () => {
             <Image
               className='m-auto mb-3'
               src={img}
-              alt='ATVS traveling'
+              alt={subtitle}
               width={280}
               height={213}
             />
