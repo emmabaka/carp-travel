@@ -9,7 +9,7 @@ const socialLinks = [
 
 const ContactUs = () => {
   return (
-    <section className='bg-backgroundSections pt-14 pb-[54px]'>
+    <section id='contacts' className='bg-backgroundSections pt-14 pb-[54px]'>
       <div className='content-container'>
         <h2 className='text-40 text-white font-thin leading-[56px] tracking-[-1.6px] uppercase pb-9'>
           Contact <span className='font-medium'>us</span>

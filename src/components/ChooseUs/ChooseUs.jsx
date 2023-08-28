@@ -25,7 +25,7 @@ const advantages = [
 
 const ChooseUs = () => {
   return (
-    <section className='bg-backgroundSections py-[56px]'>
+    <section id='career' className='bg-backgroundSections py-[56px]'>
       <div className='content-container'>
         <div className='pb-9'>
           <h2 className='text-40 text-white font-thin leading-[56px] tracking-[-1.6px] uppercase pb-6'>
