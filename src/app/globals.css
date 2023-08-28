@@ -8,6 +8,6 @@
 
 @layer components {
   .content-container {
-    @apply m-auto pr-5 pl-5;
+    @apply m-auto px-5 tablet:px-8 desktop:px-[104px];
   }
 }
