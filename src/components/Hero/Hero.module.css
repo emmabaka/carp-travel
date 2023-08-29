@@ -1,26 +1,47 @@
-.heroSection {
-  background-image: url("/public/hero.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background: rgba(2, 15, 8, 0.5);
-}
 .joinButton::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   right: 0;
   width: 42px;
   height: 53px;
-  background-image: url("/public/button-border-mobile-right.svg");
+  background-image: url('/button-border-mobile-right.svg');
   background-size: cover;
 }
 .joinButton::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 42px;
   height: 53px;
-  background-image: url("/public/button-border-mobile-left.svg");
+  background-image: url('/button-border-mobile-left.svg');
   background-size: cover;
+}
+
+@media (min-width: 768px) {
+  .joinButton::after {
+    width: 35px;
+    height: 50px;
+    background-image: url('/button-border-tablet-right.svg');
+    background-size: cover;
+  }
+  .joinButton::before {
+    width: 35px;
+    height: 50px;
+    background-image: url('/button-border-tablet-left.svg');
+  }
+}
+@media (min-width: 1280px) {
+  .joinButton::after {
+    width: 44px;
+    height: 71px;
+    background-image: url('/button-border-desktop-right.svg');
+    background-size: cover;
+  }
+  .joinButton::before {
+    width: 44px;
+    height: 71px;
+    background-image: url('/button-border-desktop-left.svg');
+  }
 }
