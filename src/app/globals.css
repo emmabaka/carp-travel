@@ -8,6 +8,6 @@
 
 @layer components {
   .content-container {
-    @apply m-auto px-5 tablet:px-8 desktop:px-[104px];
+    @apply m-auto px-5 max-w-[440px] tablet:px-8 tablet:max-w-[768px] desktop:px-[104px] desktop:max-w-[1280px];
   }
 }

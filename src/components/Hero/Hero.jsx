@@ -2,7 +2,7 @@ import s from './Hero.module.css';
 
 const Hero = () => {
   return (
-    <section className=' bg-services5 bg-cover'>
+    <section className=' bg-hero bg-cover'>
       <div className=' bg-backgroundSections pt-[105px] pb-14 tablet:pt-[124px] tablet:pb-16'>
         <div className='content-container'>
           <div className='relative'>
@@ -26,7 +26,7 @@ const Hero = () => {
               Bukovel
             </p>
             <div className='tablet:absolute tablet:bottom-0 tablet:right-0'>
-              <p className='text-12 font-extralight leading-[20px] text-white text-left py-6 max-w-[280px] mobile2:text-center mobile2:m-auto tablet:text-16 tablet:text-justify tablet:max-w-[230px] tablet:pt-0 desktop:text-18 desktop:leading-6 desktop:max-w-[295px]'>
+              <p className='text-12 font-extralight leading-[20px] text-white text-justify py-6 max-w-[280px] mobile2:text-center mobile2:m-auto tablet:text-16 tablet:text-justify tablet:max-w-[230px] tablet:pt-0 desktop:text-18 desktop:leading-6 desktop:max-w-[295px]'>
                 We offer you unforgettable trips to the most beautiful parts of
                 the Carpathians. Enjoy stunning views, exciting expeditions, and
                 the best service!
