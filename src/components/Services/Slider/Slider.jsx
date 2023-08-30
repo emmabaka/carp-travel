@@ -50,7 +50,7 @@ const sliderSections = [
   },
 ];
 
-const Slider = () => {
+const Slider = ({ handleSlideChange }) => {
   useEffect(() => {
     const bullet = document.querySelectorAll('.swiper-pagination-bullet');
 
@@ -69,6 +69,7 @@ const Slider = () => {
         }}
         modules={[Parallax, Pagination]}
         className='mySwiper h-full'
+        onSlideChange={handleSlideChange}
       >
         {sliderSections.map(({ number, img, subtitle, desc }) => (
           <SwiperSlide key={number}>
@@ -99,15 +100,6 @@ const Slider = () => {
             </div>
           </SwiperSlide>
         ))}
-        {/* <div
-          slot='container-start'
-          className='parallax-bg'
-          style={{
-            backgroundImage:
-              'url(https://swiperjs.com/demos/images/nature-1.jpg)',
-          }}
-          data-swiper-parallax='-23%'
-        ></div> */}
       </Swiper>
     </>
   );

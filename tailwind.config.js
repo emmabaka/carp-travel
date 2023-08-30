@@ -10,6 +10,11 @@ module.exports = {
     backgroundImage: {
       hero: "url('/hero.png')",
       about: "url('/about.jpg')",
+      services1: "url('/services-bg-01.jpg')",
+      services2: "url('/services-bg-02.jpg')",
+      services3: "url('/services-bg-03.jpg')",
+      services4: "url('/services-bg-04.jpg')",
+      services5: "url('/services-bg-05.jpg')",
     },
     screens: {
       mobile: '320px',
