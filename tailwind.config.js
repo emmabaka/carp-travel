@@ -21,9 +21,10 @@ module.exports = {
       mobile2: '400px',
       tablet: '768px',
       desktop: '1280px',
+      desktopL: '1440px'
     },
     colors: {
-      white: '#fff',
+      white: '#ffffff',
       red: '#ff5757',
       buttonHover: 'rgba(255, 255, 255, 0.2)',
       backgroundInput: 'rgba(255, 255, 255, 0.05)',

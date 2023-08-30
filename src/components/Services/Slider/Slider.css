@@ -28,6 +28,7 @@
 .swiper-pagination-bullet-active {
   position: relative;
   padding-left: 20px;
+  font-weight: 500;
   /* transition: all ease 100ms; */
 }
 .swiper-pagination-bullet-active::before {
@@ -47,12 +48,27 @@
   .swiper-pagination-bullets.swiper-pagination-horizontal {
     width: auto;
     top: 0;
-    right: 26px !important;
+    right: 16px !important;
     left: auto;
-    max-width: 200px;
+    max-width: 210px;
   }
   .swiper-pagination-bullet {
     font-size: 22px;
     line-height: 18px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    width: auto;
+    top: 0;
+    right: 350px !important;
+    left: auto;
+    max-width: 260px;
+  }
+  .swiper-pagination-bullet {
+    font-size: 28px;
+    line-height: 24px;
   }
 }
