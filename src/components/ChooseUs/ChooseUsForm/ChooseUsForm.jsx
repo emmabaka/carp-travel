@@ -10,6 +10,11 @@ import s from './ChooseUsForm.module.css';
 const ChooseUsForm = () => {
   const [disable, setDisable] = useState(true);
   const [checked, setChecked] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const isTablet = useMediaQuery({ minWidth: '768px', maxWidth: '1280px' });
 
@@ -41,9 +46,13 @@ const ChooseUsForm = () => {
       : setDisable(false);
   }, [errors.name, errors.email, errors.phone, errors.confirm]);
 
+  if (!mounted) {
+    return null;
+  }
+
   return (
-    <div className=' mobile:bg-chooseUs mobile:bg-cover'>
-      <div className=' mobile:bg-backgroundSections py-[56px] px-5 tablet:py-0 tablet:pl-5 tablet:pr-0'>
+    <div className='mobile:bg-chooseUs mobile:bg-cover'>
+      <div className='mobile:bg-backgroundSections py-[56px] px-5 tablet:py-0 tablet:pl-5 tablet:pr-0'>
         <div className='mobile:content-container desktop:relative'>
           <p className='text-14 text-white font-extralight leading-5 max-w-[179px] ml-auto pb-[24px] tablet:text-13 tablet:ml-0 tablet:pb-8 desktop:pb-0 desktop:absolute desktop:top-[-72px]'>
             Don&apos;t miss your opportunity!
