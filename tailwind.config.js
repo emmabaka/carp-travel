@@ -16,6 +16,7 @@ module.exports = {
       services4: "url('/services-bg-04.jpg')",
       services5: "url('/services-bg-05.jpg')",
       chooseUs: "url('/choose-us-bg.jpg')",
+      contactUs: "url('/contact-us-bg.jpg')",
     },
     screens: {
       mobile: { min: '320px', max: '768px' },

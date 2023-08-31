@@ -5,9 +5,50 @@
     @apply absolute right-0 bottom-0 translate-y-full flex items-center gap-1 text-12 text-red font-extralight leading-6 tracking-[2.4px];
   }
   .input {
-    @apply bg-backgroundInput text-20 font-extralight leading-6 py-[6px] w-full outline-none;
+    @apply bg-backgroundInput text-20 font-extralight leading-6 py-[6px] w-full outline-none tablet:text-13 tablet:py-0;
   }
   .label {
-    @apply text-12 font-extralight leading-6 tracking-[2.4px];
+    @apply text-12 text-white font-extralight leading-6 tracking-[2.4px];
+  }
+}
+
+@media (min-width: 768px) {
+  .form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.2fr 0.5fr 0fr 0fr;
+    gap: 0px 20px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      'name message'
+      'email message'
+      '. message'
+      '. submit';
+    width: 704px;
+    height: 301px;
+  }
+
+  .message {
+    grid-area: message;
+    width: 463px;
+    height: 265px;
+  }
+
+  .submit {
+    grid-area: submit;
+    width: 82px;
+    height: 36px;
+  }
+
+  .email {
+    grid-area: email;
+    width: 221px;
+    height: 52px;
+  }
+
+  .name {
+    grid-area: name;
+    width: 221px;
+    height: 52px;
   }
 }

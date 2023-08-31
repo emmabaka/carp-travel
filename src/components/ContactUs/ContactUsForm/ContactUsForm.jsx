@@ -34,14 +34,14 @@ const ContactUsForm = () => {
   }, [errors.contactUsName, errors.contactUsEmail]);
 
   return (
-    <form className='bg-transparent' onSubmit={handleSubmit(onSubmit)}>
-      <div className='relative flex flex-col gap-1 pb-[25px]'>
-        <label
-          className={`${errors.contactUsName ? 'text-red' : 'text-white'} ${
-            s.label
-          }`}
-          htmlFor='contactUsName'
-        >
+    <form
+      className={`bg-transparent ${s.form}`}
+      onSubmit={handleSubmit(onSubmit)}
+    >
+      <div
+        className={`relative flex flex-col gap-1 pb-[25px] ${s.name} tablet:pb-2`}
+      >
+        <label className={s.label} htmlFor='contactUsName'>
           Full name
         </label>
         <div className='relative'>
@@ -69,13 +69,8 @@ const ContactUsForm = () => {
           )}
         </div>
       </div>
-      <div className='relative flex flex-col gap-1 pb-[25px]'>
-        <label
-          className={`${errors.contactUsEmail ? 'text-red' : 'text-white'} ${
-            s.label
-          }`}
-          htmlFor='contactUsEmail'
-        >
+      <div className={`relative flex flex-col gap-1 pb-[25px] ${s.email}`}>
+        <label className={s.label} htmlFor='contactUsEmail'>
           E-mail
         </label>
         <div className='relative'>
@@ -102,12 +97,12 @@ const ContactUsForm = () => {
           )}
         </div>
       </div>
-      <div className='flex flex-col gap-1 pb-4'>
+      <div className={`flex flex-col gap-1 pb-4 ${s.message}`}>
         <label className={`${s.label} text-white`} htmlFor='contactUsMessage'>
           Message
         </label>
         <textarea
-          className={`${s.input} px-2 resize-none`}
+          className={`${s.input} px-2 resize-none tablet:h-[221px]`}
           {...register('contactUsMessage', {
             required: false,
           })}
@@ -117,7 +112,7 @@ const ContactUsForm = () => {
         />
       </div>
       <button
-        className='block text-30 text-white font-medium uppercase ml-auto disabled:text-buttonHover'
+        className={`block text-30 text-white font-medium uppercase ml-auto disabled:text-buttonHover ${s.submit}`}
         disabled={disable}
         type='submit'
       >
