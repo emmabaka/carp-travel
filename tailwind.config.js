@@ -15,13 +15,14 @@ module.exports = {
       services3: "url('/services-bg-03.jpg')",
       services4: "url('/services-bg-04.jpg')",
       services5: "url('/services-bg-05.jpg')",
+      chooseUs: "url('/choose-us-bg.jpg')",
     },
     screens: {
-      mobile: '320px',
+      mobile: { min: '320px', max: '768px' },
       mobile2: '400px',
       tablet: '768px',
       desktop: '1280px',
-      desktopL: '1440px'
+      desktopL: '1440px',
     },
     colors: {
       white: '#ffffff',
