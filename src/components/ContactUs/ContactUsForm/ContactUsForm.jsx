@@ -35,74 +35,78 @@ const ContactUsForm = () => {
 
   return (
     <form
-      className={`bg-transparent ${s.form}`}
+      className={`bg-transparent ${s.form} desktop:w-[607px]`}
       onSubmit={handleSubmit(onSubmit)}
     >
-      <div
-        className={`relative flex flex-col gap-1 pb-[25px] ${s.name} tablet:pb-2`}
-      >
-        <label className={s.label} htmlFor='contactUsName'>
-          Full name
-        </label>
-        <div className='relative'>
-          <input
-            className={`${errors.contactUsName ? 'text-red' : 'text-white'} ${
-              s.input
-            } px-2`}
-            type='text'
-            {...register('contactUsName', {
-              required: 'Required',
-              pattern: {
-                value:
-                  /^[a-zA-ZÀ-ÖØ-öø-ÿ]+([-'][a-zA-ZÀ-ÖØ-öø-ÿ]+)*(\s[a-zA-ZÀ-ÖØ-öø-ÿ]+([-'][a-zA-ZÀ-ÖØ-öø-ÿ]+)*)*$/,
-                message: 'Incorrect name',
-              },
-            })}
-            id='contactUsName'
-            placeholder='John Smith'
-          />
-          {errors.contactUsName && (
-            <p className={s.error}>
-              <Image src={error} alt='error' width={18} height={18} />
-              {errors.contactUsName.message}
-            </p>
-          )}
+      <div className=' desktop:flex desktop:justify-between desktop:pb-[15px]'>
+        <div
+          className={`relative flex flex-col gap-1 pb-[25px] tablet:pb-2 desktop:w-[293px] ${s.name}`}
+        >
+          <label className={s.label} htmlFor='contactUsName'>
+            Full name
+          </label>
+          <div className='relative'>
+            <input
+              className={`${errors.contactUsName ? 'text-red' : 'text-white'} ${
+                s.input
+              } px-2`}
+              type='text'
+              {...register('contactUsName', {
+                required: 'Required',
+                pattern: {
+                  value:
+                    /^[a-zA-ZÀ-ÖØ-öø-ÿ]+([-'][a-zA-ZÀ-ÖØ-öø-ÿ]+)*(\s[a-zA-ZÀ-ÖØ-öø-ÿ]+([-'][a-zA-ZÀ-ÖØ-öø-ÿ]+)*)*$/,
+                  message: 'Incorrect name',
+                },
+              })}
+              id='contactUsName'
+              placeholder='John Smith'
+            />
+            {errors.contactUsName && (
+              <p className={s.error}>
+                <Image src={error} alt='error' width={18} height={18} />
+                {errors.contactUsName.message}
+              </p>
+            )}
+          </div>
+        </div>
+        <div
+          className={`relative flex flex-col gap-1 pb-[25px] desktop:w-[293px] ${s.email}`}
+        >
+          <label className={s.label} htmlFor='contactUsEmail'>
+            E-mail
+          </label>
+          <div className='relative'>
+            <input
+              className={`${
+                errors.contactUsEmail ? 'text-red' : 'text-white'
+              } ${s.input} px-2`}
+              type='email'
+              {...register('contactUsEmail', {
+                required: 'Required',
+                pattern: {
+                  value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                  message: 'Invalid email',
+                },
+              })}
+              id='contactUsEmail'
+              placeholder='johnsmith@email.com'
+            />
+            {errors.contactUsEmail && (
+              <p className={s.error}>
+                <Image src={error} alt='error' width={18} height={18} />
+                {errors.contactUsEmail.message}
+              </p>
+            )}
+          </div>
         </div>
       </div>
-      <div className={`relative flex flex-col gap-1 pb-[25px] ${s.email}`}>
-        <label className={s.label} htmlFor='contactUsEmail'>
-          E-mail
-        </label>
-        <div className='relative'>
-          <input
-            className={`${errors.contactUsEmail ? 'text-red' : 'text-white'} ${
-              s.input
-            } px-2`}
-            type='email'
-            {...register('contactUsEmail', {
-              required: 'Required',
-              pattern: {
-                value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-                message: 'Invalid email',
-              },
-            })}
-            id='contactUsEmail'
-            placeholder='johnsmith@email.com'
-          />
-          {errors.contactUsEmail && (
-            <p className={s.error}>
-              <Image src={error} alt='error' width={18} height={18} />
-              {errors.contactUsEmail.message}
-            </p>
-          )}
-        </div>
-      </div>
-      <div className={`flex flex-col gap-1 pb-4 ${s.message}`}>
+      <div className={`flex flex-col gap-1 pb-4 desktop:pb-6 ${s.message}`}>
         <label className={`${s.label} text-white`} htmlFor='contactUsMessage'>
           Message
         </label>
         <textarea
-          className={`${s.input} px-2 resize-none tablet:h-[221px]`}
+          className={`${s.input} px-2 resize-none tablet:h-[221px] desktop:h-[174px]`}
           {...register('contactUsMessage', {
             required: false,
           })}
@@ -112,7 +116,7 @@ const ContactUsForm = () => {
         />
       </div>
       <button
-        className={`block text-30 text-white font-medium uppercase ml-auto disabled:text-buttonHover ${s.submit}`}
+        className={`block text-30 text-white font-medium uppercase ml-auto disabled:text-buttonHover desktop:text-32 ${s.submit}`}
         disabled={disable}
         type='submit'
       >

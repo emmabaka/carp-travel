@@ -5,14 +5,14 @@
     @apply absolute right-0 bottom-0 translate-y-full flex items-center gap-1 text-12 text-red font-extralight leading-6 tracking-[2.4px];
   }
   .input {
-    @apply bg-backgroundInput text-20 font-extralight leading-6 py-[6px] w-full outline-none tablet:text-13 tablet:py-0;
+    @apply bg-backgroundInput text-20 font-extralight leading-6 py-[6px] w-full outline-none tablet:text-13 tablet:py-0 desktop:text-20 desktop:py-[2px];
   }
   .label {
     @apply text-12 text-white font-extralight leading-6 tracking-[2.4px];
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1279px) {
   .form {
     display: grid;
     grid-template-columns: 1fr 1fr;
