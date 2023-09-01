@@ -1,0 +1,32 @@
+.embla {
+  --slide-spacing: 15rem;
+  --slide-size: 33.33%;
+  --slide-height: 19rem;
+  width: 100%;
+  height: 700px;
+}
+.emblaViewport {
+  overflow: hidden;
+  height: 700px;
+}
+.emblaContainer {
+  backface-visibility: hidden;
+  display: flex;
+  touch-action: pan-x;
+  margin-top: calc(var(--slide-spacing) * -1);
+  height: calc(var(--slide-spacing) + var(--slide-height));
+  flex-direction: column;
+  height: 700px;
+}
+.emblaSlide {
+  flex: 0 0 var(--slide-size);
+  min-height: 0;
+  padding-top: var(--slide-spacing);
+  position: relative;
+}
+.emblaSlideImg {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
