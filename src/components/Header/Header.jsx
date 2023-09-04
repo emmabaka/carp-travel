@@ -21,6 +21,16 @@ const Header = () => {
 
   const toggleMenu = () => {
     menuOpen ? setMenuOpen(false) : setMenuOpen(true);
+    menuOpen
+      ? (document.body.style.overflow = 'visible')
+      : (document.body.style.overflow = 'hidden');
+  };
+
+  const handleLinkClick = () => {
+    if (menuOpen) {
+      setMenuOpen(false);
+      document.body.style.overflow = 'visible';
+    }
   };
 
   return (
@@ -57,14 +67,7 @@ const Header = () => {
           </div>
           <ul className='text-center flex flex-col gap-12 tablet:flex-row tablet:gap-6 desktop:gap-14'>
             {menuLinks.map(({ href, name }) => (
-              <li
-                key={name}
-                onClick={() => {
-                  if (menuOpen) {
-                    setMenuOpen(false);
-                  }
-                }}
-              >
+              <li key={name} onClick={handleLinkClick}>
                 <a
                   href={href}
                   className='text-18 text-white tracking-[1.8px] tablet:text-14 tablet:tracking-[1.4px]'
