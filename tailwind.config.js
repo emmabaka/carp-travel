@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {},
     backgroundImage: {
-      hero: "url('/hero.png')",
+      hero: "url('/hero.jpg')",
       about: "url('/about.jpg')",
       services1: "url('/services-bg-01.jpg')",
       services2: "url('/services-bg-02.jpg')",
