@@ -2,16 +2,8 @@
 import Image from 'next/image';
 import { useCallback, useState, useEffect } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
-import forest from '../../../../public/gallery-forest.jpg';
-import lake from '../../../../public/gallery-lake.jpg';
-import mountain from '../../../../public/gallery-mountain.jpg';
+import { gallery } from '@/data/data';
 import s from './TabletAndDesktop.module.css';
-
-const gallery = [
-  { id: 1, img: forest, alt: 'Forest' },
-  { id: 2, img: lake, alt: 'Lake' },
-  { id: 3, img: mountain, alt: 'Mountain' },
-];
 
 const TabletAndDesktopGallery = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, dragFree: true });

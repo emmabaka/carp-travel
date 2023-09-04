@@ -9,8 +9,6 @@ const Services = () => {
     setActiveSlide(String(e.activeIndex + 1));
   };
 
-  console.log(`bg-services${activeSlide}`);
-
   return (
     <section
       id='services'

@@ -1,11 +1,5 @@
 import ContactUsForm from './ContactUsForm/ContactUsForm';
-
-const socialLinks = [
-  { id: 1, name: 'facebook', href: '#' },
-  { id: 2, name: 'instagram', href: '#' },
-  { id: 3, name: 'youtube', href: '#' },
-  { id: 4, name: 'tiktok', href: '#' },
-];
+import { socialLinks } from '@/data/data';
 
 const ContactUs = () => {
   return (

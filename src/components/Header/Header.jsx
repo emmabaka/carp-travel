@@ -1,20 +1,12 @@
 'use client';
-
 import Image from 'next/image';
-import logo from '../../../public/logo.svg';
 import Link from 'next/link';
-import { Karantina } from 'next/font/google';
 import { useState } from 'react';
+import { Karantina } from 'next/font/google';
+import { headerMenuLinks } from '@/data/data';
+import logo from '../../../public/logo.svg';
 
 const karantina = Karantina({ subsets: ['latin'], weight: '400' });
-
-const menuLinks = [
-  { href: '#about', name: 'About' },
-  { href: '#services', name: 'Services' },
-  { href: '#career', name: 'Career' },
-  { href: '#gallery', name: 'Gallery' },
-  { href: '#contacts', name: 'Contacts' },
-];
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -66,7 +58,7 @@ const Header = () => {
             </button>
           </div>
           <ul className='text-center flex flex-col gap-12 tablet:flex-row tablet:gap-6 desktop:gap-14'>
-            {menuLinks.map(({ href, name }) => (
+            {headerMenuLinks.map(({ href, name }) => (
               <li key={name} onClick={handleLinkClick}>
                 <a
                   href={href}

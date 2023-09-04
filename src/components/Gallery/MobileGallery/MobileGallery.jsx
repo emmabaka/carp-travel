@@ -2,18 +2,8 @@
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
-import forest from '../../../../public/gallery-forest.jpg';
-import lake from '../../../../public/gallery-lake.jpg';
-import mountain from '../../../../public/gallery-mountain.jpg';
-import fog from '../../../../public/gallery-fog.jpg';
+import { mobileGallery } from '@/data/data';
 import s from './MobileGallery.module.css';
-
-const gallery = [
-  { id: 1, img: forest, alt: 'Forest' },
-  { id: 2, img: lake, alt: 'Lake' },
-  { id: 3, img: mountain, alt: 'Mountain' },
-  { id: 4, img: fog, alt: 'Forest' },
-];
 
 const MobileGallery = () => {
   const [mounted, setMounted] = useState(false);
@@ -41,7 +31,7 @@ const MobileGallery = () => {
     <div className={s.embla}>
       <div className={s.emblaViewport} ref={emblaRef}>
         <div className={s.emblaContainer}>
-          {gallery.map(({ id, img, alt }) => (
+          {mobileGallery.map(({ id, img, alt }) => (
             <div key={id} className={s.emblaSlide}>
               <Image
                 className=' m-auto'

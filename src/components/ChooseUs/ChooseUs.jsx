@@ -1,29 +1,7 @@
 'use client';
 import { useMediaQuery } from 'react-responsive';
 import ChooseUsForm from './ChooseUsForm/ChooseUsForm';
-
-const advantages = [
-  {
-    id: 1,
-    title: 'Professional development',
-    desc: 'We offer growth opportunities and a creative environment to nurture your talents.',
-  },
-  {
-    id: 2,
-    title: 'Teamwork',
-    desc: 'Join our close-knit family, where support and inspiration abound.',
-  },
-  {
-    id: 3,
-    title: 'Stimulating work environment',
-    desc: 'Flexibility and remote options for a comfortable experience.',
-  },
-  {
-    id: 4,
-    title: 'Exciting challenges',
-    desc: 'Unleash your potential through unforgettable projects showcasing Carpathian beauty.Flexibility and remote options for a comfortable experience.',
-  },
-];
+import { chooseUsAdvantages } from '@/data/data';
 
 const ChooseUs = () => {
   const isTabletOrDesktop = useMediaQuery({ query: '(min-width: 768px)' });
@@ -47,7 +25,7 @@ const ChooseUs = () => {
             </h3>
             <div className=' tablet:flex tablet:items-start'>
               <ul className=' flex flex-col gap-4 max-w-[180px] tablet:max-w-[221px] desktop:max-w-[562px]'>
-                {advantages.map((item) => (
+                {chooseUsAdvantages.map((item) => (
                   <li
                     key={item.id}
                     className=' desktop:flex desktop:justify-between desktop:gap-6'
