@@ -27,7 +27,7 @@ const advantages = [
 
 const ChooseUs = () => {
   const isTabletOrDesktop = useMediaQuery({ query: '(min-width: 768px)' });
-  console.log(isTabletOrDesktop);
+
   return (
     <>
       <section id='career' className='bg-chooseUs bg-cover bg-center'>
