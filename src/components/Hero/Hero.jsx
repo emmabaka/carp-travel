@@ -2,8 +2,8 @@ import s from './Hero.module.css';
 
 const Hero = () => {
   return (
-    <section className=' bg-hero bg-center bg-cover'>
-      <div className=' bg-backgroundSections pt-[105px] pb-14 tablet:pt-[124px] tablet:pb-16'>
+    <section className='bg-hero bg-center bg-cover'>
+      <div className='bg-backgroundSections pt-[105px] pb-14 tablet:pt-[124px] tablet:pb-16'>
         <div className='content-container'>
           <div className='relative'>
             <h2 className='flex flex-col text-right max-w-[120px] ml-auto tablet:absolute tablet:top-[29px] tablet:right-0 tablet:max-w-[230px] desktop:max-w-[315px]'>

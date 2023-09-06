@@ -40,9 +40,9 @@ const Slider = ({ handleSlideChange }) => {
                 width={280}
                 height={213}
               />
-              <div className=' tablet:flex tablet:flex-col tablet:justify-between tablet:pl-5'>
+              <div className='tablet:flex tablet:flex-col tablet:justify-between tablet:pl-5'>
                 <div
-                  className='text-12 text-white text-right font-extralight leading-6 tracking-[2.4px] pb-[224px] tablet:pt-[195px] tablet:pb-0 tablet:text-justify desktop:pt-0 desktop:relative desktop:top-[-10px] desktop:self-start '
+                  className='text-12 text-white text-right font-extralight leading-6 tracking-[2.4px] pb-[224px] tablet:pt-[195px] tablet:pb-0 tablet:text-justify desktop:pt-0 desktop:relative desktop:top-0 desktop:self-start '
                   data-swiper-parallax='-200'
                 >
                   {subtitle}

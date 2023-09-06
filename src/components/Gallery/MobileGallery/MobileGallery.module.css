@@ -14,7 +14,6 @@
   display: flex;
   touch-action: pan-x;
   margin-top: calc(var(--slide-spacing) * -1);
-  height: calc(var(--slide-spacing) + var(--slide-height));
   flex-direction: column;
   height: 700px;
 }

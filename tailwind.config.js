@@ -30,6 +30,7 @@ module.exports = {
       white: '#ffffff',
       red: '#ff5757',
       buttonHover: 'rgba(255, 255, 255, 0.2)',
+      submitButtonHover: 'rgba(255, 255, 255, 0.8)',
       backgroundInput: 'rgba(255, 255, 255, 0.05)',
       backgroundDefault: 'rgba(255, 255, 255, 0.10)',
       backgroundSections: 'rgba(2, 15, 8, 0.5)',

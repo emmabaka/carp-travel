@@ -114,7 +114,7 @@ const ContactUsForm = () => {
         />
       </div>
       <button
-        className={`block text-30 text-white font-medium uppercase ml-auto disabled:text-buttonHover desktop:text-32 ${s.submit}`}
+        className={`block text-30 text-white font-medium uppercase ml-auto disabled:text-buttonHover desktop:text-32 ${s.submit} hover:text-submitButtonHover`}
         disabled={disable}
         type='submit'
       >

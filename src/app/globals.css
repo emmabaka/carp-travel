@@ -10,6 +10,9 @@
   .content-container {
     @apply m-auto px-5 max-w-[440px] tablet:px-8 tablet:max-w-[768px] desktop:px-6 desktop:max-w-[1280px] desktopL:max-w-[1440px] desktopL:px-[104px];
   }
+  .title{
+    @apply text-40 text-white font-thin leading-[56px] tracking-[-1.6px] uppercase tablet:text-67 tablet:tracking-[-2.68px] desktop:text-98 desktop:tracking-[-3.92px] desktop:leading-normal;
+  }
 }
 
 .link-hover::after {

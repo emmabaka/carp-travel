@@ -4,11 +4,11 @@ const About = () => {
       <div className='bg-backgroundSections pt-[55px] pb-[54px] tablet:pt-16 tablet:pb-0 desktop:pt-[106px]'>
         <div className='content-container '>
           <div className='tablet:relative tablet:flex tablet:justify-between tablet:items-start desktop:justify-start desktop:gap-7'>
-            <h2 className='text-40 text-white font-medium tracking-[-1.6px] uppercase tablet:text-67 tablet:tracking-[2.68px] desktop:text-98 desktop:tracking-[-3.92px]'>
-              <span className='font-thin'>Who</span> we are
+            <h2 className='title'>
+              Who <span className='font-medium'>we are</span>
             </h2>
             <div>
-              <p className='text-14 text-white font-extralight leading-5 max-w-[180px] pb-5 tablet:ml-auto tablet:text-16 tablet:max-w-[220px] tablet:pb-4 tablet:pt-4 desktop:text-18 desktop:leading-6 desktop:pb-6 desktop:pt-8 desktop:max-w-[292px]'>
+              <p className='text-14 text-white font-extralight leading-5 max-w-[180px] pb-5 tablet:ml-auto tablet:text-16 tablet:max-w-[220px] tablet:pb-4 tablet:pt-0 desktop:text-18 desktop:leading-6 desktop:pb-6 desktop:pt-8 desktop:max-w-[292px]'>
                 <span className='font-normal'>a team of enthusiasts</span> who
                 are fully committed to the mission of creating unforgettable and
                 extraordinary trips to the most beautiful parts of the
@@ -23,7 +23,7 @@ const About = () => {
                 your potential, enriching your spiritual world and creating
                 unforgettable memories.
               </p>
-              <div className=' tablet:absolute tablet:left-0 tablet:bottom-[188px] desktop:right-0 desktop:bottom-[104px]'>
+              <div className='tablet:absolute tablet:left-0 tablet:bottom-[188px] desktop:right-0 desktop:bottom-[104px]'>
                 <p className='flex flex-col items-end '>
                   <span className='text-14 text-white font-normal leading-5 uppercase w-[180px] tablet:text-16 tablet:w-[221px]'>
                     From vacationers

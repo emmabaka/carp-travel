@@ -52,7 +52,7 @@ const ChooseUsForm = () => {
   }
 
   return (
-    <div className='mobile:bg-chooseUs mobile:bg-cover'>
+    <div className=' mobile:bg-chooseUs mobile:bg-cover'>
       <div className='mobile:bg-backgroundSections py-[56px] px-5 tablet:py-0 tablet:pl-5 tablet:pr-0'>
         <div className='mobile:content-container desktop:relative'>
           <p className='text-14 text-white font-extralight leading-5 max-w-[179px] ml-auto pb-[24px] tablet:text-13 tablet:ml-0 tablet:pb-8 desktop:pb-0 desktop:absolute desktop:top-[-72px]'>
@@ -210,7 +210,7 @@ const ChooseUsForm = () => {
                 onClick={() => {
                   checked ? setChecked(false) : setChecked(true);
                 }}
-                className=' invisible absolute whitespace-nowrap w-[1px] h-[1px] overflow-hidden border-0 p-0 m-[-1px]'
+                className='invisible absolute whitespace-nowrap w-[1px] h-[1px] overflow-hidden border-0 p-0 m-[-1px]'
                 type='checkbox'
                 {...register('confirm', {
                   required: true,
@@ -240,7 +240,7 @@ const ChooseUsForm = () => {
             </div>
 
             <button
-              className={`block text-30 text-white font-medium uppercase ml-auto disabled:text-buttonHover desktop:text-32 ${s.submit}`}
+              className={`block text-30 text-white font-medium uppercase ml-auto disabled:text-buttonHover desktop:text-32 ${s.submit} hover:text-submitButtonHover`}
               disabled={disable}
               type='submit'
             >

@@ -6,10 +6,10 @@ const ContactUs = () => {
     <footer id='contacts' className='bg-contactUs bg-cover'>
       <div className='bg-backgroundSectionsDark pt-14 pb-[54px] tablet:py-16 desktop:py-[104px]'>
         <div className='content-container'>
-          <h2 className='text-40 text-white font-thin leading-[56px] tracking-[-1.6px] uppercase pb-9 tablet:text-67 tablet:tracking-[-2.68px] tablet:leading-[66px] desktop:text-98 desktop:tracking-[-3.92px] desktop:pb-[71px]'>
+          <h2 className='title pb-9 tablet:leading-[66px] desktop:pb-[71px]'>
             Contact <span className='font-medium'>us</span>
           </h2>
-          <div className=' tablet:relative desktop:flex desktop:justify-between'>
+          <div className='tablet:relative desktop:flex desktop:justify-between'>
             <ul className='pb-3 max-w-[280px] ml-auto tablet:ml-0 tablet:pl-[34px] tablet:max-w-[325px] desktop:pl-[83px] desktop:max-w-[390px]'>
               <li className='flex items-baseline gap-5 justify-end pb-6 desktop:pb-16'>
                 <div className='flex flex-col'>
