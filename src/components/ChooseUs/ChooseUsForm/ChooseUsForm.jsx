@@ -4,7 +4,8 @@ import Image from 'next/image';
 import { useForm } from 'react-hook-form';
 import InputMask from 'react-input-mask';
 import { useMediaQuery } from 'react-responsive';
-import error from '../../../../public/x.svg';
+import { RE_NAME, RE_EMAIL, RE_PHONE } from '@/helpers/regex';
+import error from '/public/svgs/x.svg';
 import s from './ChooseUsForm.module.css';
 
 const ChooseUsForm = () => {
@@ -84,7 +85,7 @@ const ChooseUsForm = () => {
                     required: 'Required',
                     pattern: {
                       value:
-                        /^[a-zA-ZÀ-ÖØ-öø-ÿ]+([-'][a-zA-ZÀ-ÖØ-öø-ÿ]+)*(\s[a-zA-ZÀ-ÖØ-öø-ÿ]+([-'][a-zA-ZÀ-ÖØ-öø-ÿ]+)*)*$/,
+                        RE_NAME,
                       message: 'Incorrect name',
                     },
                   })}
@@ -119,7 +120,7 @@ const ChooseUsForm = () => {
                   {...register('email', {
                     required: 'Required',
                     pattern: {
-                      value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                      value: RE_EMAIL,
                       message: 'Invalid email',
                     },
                   })}
@@ -169,7 +170,7 @@ const ChooseUsForm = () => {
                   {...register('phone', {
                     required: 'Required',
                     pattern: {
-                      value: /^\(\d{3}\) \d{2} \d{2} \d{3}$/,
+                      value: RE_PHONE,
                       message: 'Incorrect phone',
                     },
                   })}
@@ -222,7 +223,7 @@ const ChooseUsForm = () => {
                 } relative text-12 font-extralight leading-[22px]`}
                 htmlFor='confirm'
               >
-                <p className=' max-w-[280px] pl-8 tablet:w-[200px] desktop:w-[266px]'>
+                <p className='max-w-[280px] pl-8 tablet:w-[200px] desktop:w-[266px]'>
                   I confirm my consent to the processing of
                   {!isTablet && <br />}
                   personal data.

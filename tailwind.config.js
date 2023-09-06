@@ -8,16 +8,16 @@ module.exports = {
   theme: {
     extend: {},
     backgroundImage: {
-      hero: "url('/hero.jpg')",
-      about: "url('/about.jpg')",
-      services1: "url('/services-bg-01.jpg')",
-      services2: "url('/services-bg-02.jpg')",
-      services3: "url('/services-bg-03.jpg')",
-      services4: "url('/services-bg-04.jpg')",
-      services5: "url('/services-bg-05.jpg')",
-      chooseUs: "url('/choose-us-bg.jpg')",
-      gallery: "url('/gallery-bg.jpg')",
-      contactUs: "url('/contact-us-bg.jpg')",
+      hero: "url('/images/hero-bg.webp')",
+      about: "url('/images/about-bg.webp')",
+      services1: "url('/images/services-bg-01.webp')",
+      services2: "url('/images/services-bg-02.webp')",
+      services3: "url('/images/services-bg-03.webp')",
+      services4: "url('/images/services-bg-04.webp')",
+      services5: "url('/images/services-bg-05.webp')",
+      chooseUs: "url('/images/choose-us-bg.webp')",
+      gallery: "url('/images/gallery-bg.webp')",
+      contactUs: "url('/images/contact-us-bg.webp')",
     },
     screens: {
       mobile: { min: '320px', max: '768px' },
@@ -63,5 +63,5 @@ module.exports = {
     },
   },
 
-  plugins: [],
+  plugins: [require('autoprefixer')],
 };

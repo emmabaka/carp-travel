@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Parallax, Pagination } from 'swiper/modules';
-import { sliderSections } from '../data';
+import { sliderSections } from '@/data/data';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import './Slider.css';

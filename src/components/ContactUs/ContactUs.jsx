@@ -3,36 +3,36 @@ import { socialLinks } from '@/data/data';
 
 const ContactUs = () => {
   return (
-    <section id='contacts' className='bg-contactUs bg-cover'>
+    <footer id='contacts' className='bg-contactUs bg-cover'>
       <div className='bg-backgroundSectionsDark pt-14 pb-[54px] tablet:py-16 desktop:py-[104px]'>
         <div className='content-container'>
           <h2 className='text-40 text-white font-thin leading-[56px] tracking-[-1.6px] uppercase pb-9 tablet:text-67 tablet:tracking-[-2.68px] tablet:leading-[66px] desktop:text-98 desktop:tracking-[-3.92px] desktop:pb-[71px]'>
             Contact <span className='font-medium'>us</span>
           </h2>
           <div className=' tablet:relative desktop:flex desktop:justify-between'>
-            <ul className='pb-3 max-w-[280px] ml-auto tablet:ml-0 tablet:pl-[34px] tablet:max-w-[314px] desktop:pl-[83px] desktop:max-w-[390px]'>
+            <ul className='pb-3 max-w-[280px] ml-auto tablet:ml-0 tablet:pl-[34px] tablet:max-w-[325px] desktop:pl-[83px] desktop:max-w-[390px]'>
               <li className='flex items-baseline gap-5 justify-end pb-6 desktop:pb-16'>
                 <div className='flex flex-col'>
                   <a
-                    className='text-14 text-white leading-6 tablet:text-16 tablet:pl-5 desktop:text-18'
+                    className='link-hover relative text-14 text-white leading-6 tablet:text-16 tablet:pl-5 desktop:text-18'
                     href='tel:+380981234567'
                   >
                     +38 (098) 12 34 567
                   </a>
                   <a
-                    className='text-14 text-white leading-6 tablet:text-16 tablet:pl-5 desktop:text-18'
+                    className='link-hover relative text-14 text-white leading-6 tablet:text-16 tablet:pl-5 desktop:text-18'
                     href='tel:+380731234567'
                   >
                     +38 (073) 12 34 567
                   </a>
                 </div>
-                <span className='text-12 text-white font-extralight leading-5'>
+                <span className='text-12 text-white font-extralight leading-5 tablet:pr-1 desktop:pr-0'>
                   Phone number
                 </span>
               </li>
               <li className='flex items-baseline gap-5 pl-4 pb-[26px] tablet:pl-0 desktop:pb-[124px]'>
                 <a
-                  className='text-14 text-white leading-6 tablet:text-16 desktop:text-18'
+                  className='link-hover relative text-14 text-white leading-6 tablet:text-16 desktop:text-18'
                   href='mailto:support@carptravel.com'
                 >
                   support@carptravel.com
@@ -46,7 +46,7 @@ const ContactUs = () => {
                   {socialLinks.map((item) => (
                     <a
                       key={item.id}
-                      className='text-14 text-white leading-6 tablet:text-16 desktop:text-18 desktop:text-right'
+                      className='link-hover relative text-14 text-white leading-6 tablet:text-16 desktop:text-18 desktop:text-right'
                       href={item.href}
                     >
                       {item.name}
@@ -62,7 +62,7 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
-    </section>
+    </footer>
   );
 };
 

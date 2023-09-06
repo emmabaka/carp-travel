@@ -2,11 +2,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
-import { Karantina } from 'next/font/google';
 import { headerMenuLinks } from '@/data/data';
-import logo from '../../../public/logo.svg';
-
-const karantina = Karantina({ subsets: ['latin'], weight: '400' });
+import logo from '/public/svgs/logo.svg';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -29,18 +26,7 @@ const Header = () => {
     <header className='absolute pt-9 w-full tablet:pt-[25px] desktop:pt-6'>
       <div className='content-container flex justify-between items-center'>
         <Link href='/' className='flex flex-col items-center justify-center'>
-          <Image
-            className=' w-[59px] h-[21px] desktop:w-[61px] desktop:h-[22px]'
-            src={logo}
-            alt='Logo'
-            width={59}
-            height={21}
-          />
-          <span
-            className={`${karantina.className} text-14 text-white tracking-[2.6px]`}
-          >
-            CarpTravel
-          </span>
+          <Image src={logo} alt='Logo' width={61} height={33} />
         </Link>
         <nav
           className={`absolute ${
@@ -59,7 +45,11 @@ const Header = () => {
           </div>
           <ul className='text-center flex flex-col gap-12 tablet:flex-row tablet:gap-6 desktop:gap-14'>
             {headerMenuLinks.map(({ href, name }) => (
-              <li key={name} onClick={handleLinkClick}>
+              <li
+                key={name}
+                className='link-hover relative'
+                onClick={handleLinkClick}
+              >
                 <a
                   href={href}
                   className='text-18 text-white tracking-[1.8px] tablet:text-14 tablet:tracking-[1.4px]'

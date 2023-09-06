@@ -33,7 +33,7 @@ const Hero = () => {
               </p>
               <a
                 href='#contacts'
-                className={`${s.joinButton} max-w-[280px] flex items-center justify-center relative text-18 text-white font-bold leading-normal uppercase py-[13px] px-16 bg-backgroundDefault m-auto tablet:max-w-[230px] tablet:py-[11.5px] desktop:text-32 desktop:max-w-[295px]`}
+                className={`${s.joinButton} max-w-[280px] flex items-center justify-center relative text-18 text-white font-bold leading-normal uppercase py-[13px] px-16 bg-backgroundDefault m-auto tablet:max-w-[230px] tablet:py-[11.5px] desktop:text-32 desktop:max-w-[295px] hover:bg-buttonHover`}
               >
                 Join now
               </a>

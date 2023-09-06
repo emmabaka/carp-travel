@@ -1,10 +1,18 @@
 import Hero from '@/components/Hero/Hero';
 import Header from '@/components/Header/Header';
 import About from '@/components/About/About';
-import Services from '@/components/Services/Services';
-import ChooseUs from '@/components/ChooseUs/ChooseUs';
-import Gallery from '@/components/Gallery/Gallery';
-import ContactUs from '@/components/ContactUs/ContactUs';
+import dynamic from 'next/dynamic';
+
+const Services = dynamic(() => import('@/components/Services/Services'), {
+  ssr: false,
+});
+const ChooseUs = dynamic(() => import('@/components/ChooseUs/ChooseUs'), {
+  ssr: false,
+});
+const Gallery = dynamic(() => import('@/components/Gallery/Gallery'), {
+  ssr: false,
+});
+const ContactUs = dynamic(() => import('@/components/ContactUs/ContactUs'));
 
 export default function Home() {
   return (

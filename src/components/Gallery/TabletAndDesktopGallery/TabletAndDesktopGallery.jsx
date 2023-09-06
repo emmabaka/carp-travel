@@ -44,13 +44,13 @@ const TabletAndDesktopGallery = () => {
       </div>
       <div className='flex justify-between pt-3'>
         <button
-          className='text-33 font-thin text-white uppercase'
+          className='link-hover relative text-33 font-thin text-white uppercase'
           onClick={scrollPrev}
         >
           Back
         </button>
         <button
-          className='text-33 font-thin text-white uppercase'
+          className='link-hover relative text-33 font-thin text-white uppercase'
           onClick={scrollNext}
         >
           Next

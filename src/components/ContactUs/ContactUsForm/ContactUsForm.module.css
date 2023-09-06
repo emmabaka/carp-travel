@@ -12,7 +12,7 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) {
   .form {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -50,5 +50,35 @@
     grid-area: name;
     width: 221px;
     height: 52px;
+  }
+}
+@media (min-width: 1280px) {
+  .form {
+    grid-template-rows: 0.5fr 1fr 0fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      'name email'
+      'message message'
+      '. submit';
+    width: 607px;
+    height: 361px;
+  }
+  .name {
+    width: 293px;
+    height: 56px;
+  }
+  .email {
+    justify-self: end;
+    width: 294px;
+    height: 56px;
+  }
+  .message {
+    width: 607px;
+    height: 202px;
+  }
+  .submit {
+    justify-self: end;
+    width: 87px;
+    height: 39px;
   }
 }

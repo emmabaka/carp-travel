@@ -1,6 +1,3 @@
-.swiper {
-  /* overflow: visible; */
-}
 .swiper-pagination-bullets {
   display: flex;
   flex-direction: column;
@@ -18,18 +15,23 @@
   width: 100%;
   height: auto;
   text-align: start;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.3);
+  opacity: 1;
 
   font-size: 20px;
   font-weight: 200;
   line-height: 17px;
   text-transform: uppercase;
 }
+.swiper-pagination-bullet:hover {
+  transition: color ease 300ms;
+  color: rgba(255, 255, 255, 0.8);
+}
 .swiper-pagination-bullet-active {
   position: relative;
   padding-left: 20px;
   font-weight: 500;
-  /* transition: all ease 100ms; */
+  color: rgba(255, 255, 255, 1);
 }
 .swiper-pagination-bullet-active::before {
   content: '';
